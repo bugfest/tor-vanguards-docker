@@ -2,8 +2,8 @@
 
 Tor Vanguards multiarch dockerfile
 
-[![Build multiarch image - latest](https://github.com/bugfest/tor-vanguard-docker/actions/workflows/main.yml/badge.svg)](https://github.com/bugfest/tor-vanguard-docker/actions/workflows/main.yml)
-[![Build multiarch image - tag](https://github.com/bugfest/tor-vanguard-docker/actions/workflows/main-tag.yml/badge.svg)](https://github.com/bugfest/tor-vanguard-docker/actions/workflows/main-tag.yml)
+[![Build multiarch image - latest](https://github.com/bugfest/tor-vanguards-docker/actions/workflows/main.yml/badge.svg)](https://github.com/bugfest/tor-vanguards-docker/actions/workflows/main.yml)
+[![Build multiarch image - tag](https://github.com/bugfest/tor-vanguards-docker/actions/workflows/main-tag.yml/badge.svg)](https://github.com/bugfest/tor-vanguards-docker/actions/workflows/main-tag.yml)
 
 Tested architectures:
 - amd64
