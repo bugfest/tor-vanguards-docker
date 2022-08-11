@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ARCH=$(uname -m)
+PYPYVER=pypy3.9-v7.3.9
 SKIP_PYPY=0
 
 case $ARCH in
@@ -30,10 +31,8 @@ fi
 wget https://downloads.python.org/pypy/${PYPY_RELEASE}.tar.bz2 -O /tmp/${PYPY_RELEASE}.tar.bz2
 pushd /opt
 tar jxvf /tmp/${PYPY_RELEASE}.tar.bz2
-ln -s ${PYPY_RELEASE}.tar.bz2 pypy
+ln -s ${PYPY_RELEASE} pypy
 /opt/pypy/bin/pypy -m ensurepip
-pushd /usr/local/bin
-ln -s /opt/pypy/bin/pypy python
 
 echo "pypy installed at /opt/pypy/bin/pypy"
 exit 0

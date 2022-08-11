@@ -28,7 +28,7 @@ ARG SRCDIR=/src
 
 COPY --from=source ${SRCDIR} ${SRCDIR}
 WORKDIR ${SRCDIR}
-RUN python -m pip install .
+RUN python3 -m pip install .
 
 #------ Runner
 
