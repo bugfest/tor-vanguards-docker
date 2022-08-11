@@ -33,7 +33,7 @@ RUN python3 -m pip install .
 #------ Runner
 
 FROM base as runner
-COPY --from=installer /opt/pypy /opt/pypy
+COPY --from=installer /opt /opt
 COPY --from=source /version /version
 
 ENTRYPOINT ["/opt/pypy/bin/vanguards"]
