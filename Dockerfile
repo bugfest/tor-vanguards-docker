@@ -9,9 +9,9 @@ RUN git -C ${SRCDIR} checkout ${REF}
 RUN git -C ${SRCDIR} describe --tags > /version
 WORKDIR ${SRCDIR}
 
-#------ Builder
+#------ Base
 
-FROM debian:buster-slim as py3
+FROM debian:buster-slim as base
 ARG PYPYVER=pypy3.9-v7.3.9
 
 RUN apt-get update
@@ -23,7 +23,7 @@ ENV PATH /opt/pypy/bin:$PATH
 
 #------ Installer
 
-FROM py3 as installer
+FROM base as installer
 ARG SRCDIR=/src
 
 COPY --from=source ${SRCDIR} ${SRCDIR}
@@ -32,7 +32,7 @@ RUN python -m pip install .
 
 #------ Runner
 
-FROM python as runner
+FROM base as runner
 COPY --from=installer /opt/pypy /opt/pypy
 COPY --from=source /version /version
 
