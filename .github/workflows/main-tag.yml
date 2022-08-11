@@ -27,7 +27,8 @@ jobs:
         run: |
           BUILD_DATE=$(date --rfc-3339=seconds --utc)
           echo ::set-output name=build_date::${BUILD_DATE}
-          PLATFORMS=amd64,arm,arm64
+          # PLATFORMS=amd64,arm,arm64
+          PLATFORMS=all
           TAGS1="quay.io/${{ github.repository_owner }}/tor-vanguards:${{ steps.vars.outputs.tag }}"
           if [ "${{github.event_name}}" == "pull_request" ]; then
                 echo ::set-output name=push::false
