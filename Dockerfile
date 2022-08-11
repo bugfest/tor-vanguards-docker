@@ -19,6 +19,7 @@ RUN apt-get install -y wget bzip2
 
 COPY install-pypy.sh /.
 RUN bash -x /install-pypy.sh || apt-get install -y python3 python3-pip
+ENV PATH /opt/pypy/bin:$PATH
 
 #------ Installer
 

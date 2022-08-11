@@ -60,7 +60,7 @@ jobs:
           version: latest
           driver-opts: image=moby/buildkit:latest
 
-      - name: Build and push (tor-controller)
+      - name: Build and push (tor-vanguards)
         uses: docker/build-push-action@v2
         with:
           build-args: |
