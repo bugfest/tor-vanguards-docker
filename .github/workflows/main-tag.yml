@@ -19,8 +19,8 @@ jobs:
 
       - name: Checkout
         uses: actions/checkout@v2
-        with:
-          ref: ${{ steps.vars.outputs.tag }}
+        # with:
+        #   ref: ${{ steps.vars.outputs.tag }}
 
       - name: Prepare
         id: prep
