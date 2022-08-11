@@ -10,6 +10,16 @@ Tested architectures:
 - arm
 - arm64
 
+This container uses `pypy` when pre-compiled binaries (https://downloads.python.org/pypy/) are available for the target arch.
+
+| Architecture | Python runtime |
+|:------------:|:--------------:|
+| `amd64`      | `pypy3`        |
+| `arm64` (v8) | `pypy3`        |
+| `390x`       | `pypy3`        |
+| `arm` (v7)   | `python3`      |
+| other        | `python3`      |     
+
 Used by [bugfest/tor-controller](https://github.com/bugfest/tor-controller)
 
 ## How to
